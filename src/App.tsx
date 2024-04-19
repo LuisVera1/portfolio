@@ -1,17 +1,17 @@
-import './App.css';
-import { Hero, Navbar } from './components';
+import { Route, Routes } from 'react-router-dom';
+import { Dev } from './pages/Dev/Dev';
+import { Home } from './pages/Home/Home';
 
 function App() {
 	return (
-		<div className="container">
-			{/* header */}
-			<Navbar />
+		<>
+			<Routes>
+				<Route path="/dev" element={<Dev />} />
 
-			{/* main */}
-			<Hero />
+				<Route path="*" element={<Home />} />
 
-			<section>Hello</section>
-		</div>
+			</Routes>
+		</>
 	);
 }
 

@@ -1,27 +1,41 @@
-main {
-	background-color: skyblue;
+/* main {
+	background-color: #87ceeb22;
 	height: calc(100vh - var(--nav-height));
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+} */
 
 .hero__section {
 	width: 90%;
 	height: 80%;
 	border: 2px solid yellow;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 
 .hero__image-section {
-  width: 250px;
-  height: 250px;
-  background-color: gray;
-  border-radius: 50%;
-  /* margin: 0 auto; */
+	max-width: 250px;
+	max-height: 250px;
+	min-height: 80px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	overflow: hidden;
+	object-fit: cover;
+}
+
+.hero__image {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+@media (orientation: lannscape) {
+	.hero__section {
+		height: 95%;
+	}
 }
