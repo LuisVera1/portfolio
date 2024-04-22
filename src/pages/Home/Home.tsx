@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import './home.css';
 import { sendMsg } from '../../helpers/sendMsg';
+import './home.css';
 
 const initialForm = {
 	user: '',
@@ -53,21 +53,48 @@ export const Home = () => {
 				<div className="content">
 					<div className="presentation">
 						<div className="presentation__img"></div>
-						<h1 className="presentation__name">Hi, my Name is Luis Vera</h1>
-						<h2 className="presentation__subtitle">I'm Full Stack Developer</h2>
-						<p className="presentation__description">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-							tempora illo. Delectus odio laborum quaerat saepe voluptur!
-						</p>
+
+						<div className="presentation__text-section">
+							<h1 className="presentation__name">Hi, my Name is Luis Vera</h1>
+							<h2 className="presentation__subtitle">
+								I'm Full Stack Developer
+							</h2>
+							<p className="presentation__description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Nostrum, tempora illo. Delectus odio laborum quaerat saepe
+								voluptur!
+							</p>
+						</div>
 
 						<a className="presentation__link" href="/#contactme">
 							Conctat me!
 						</a>
 
 						<div className="icons__section">
-							<div></div>
-							<div></div>
-							<div></div>
+							<a href="https://github.com/LuisVera1" id="icon-git">
+								<img
+									className="icons__img"
+									src="./github.svg"
+									height="50"
+									alt="Github"
+								/>
+							</a>
+							<a href="https://www.linkedin.com/in/luisverag">
+								<img
+									className="icons__img"
+									src="./linkedin.svg"
+									height="50"
+									alt="LinkedIn"
+								/>
+							</a>
+							<a href="https://www.frontendmentor.io/profile/LuisVera1">
+								<img
+									className="icons__img"
+									src="./fem.svg"
+									height="50"
+									alt="Frontend Mentor"
+								/>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -117,7 +144,7 @@ export const Home = () => {
 							</div>
 							{status == appStates.sended && <p>Sended Message</p>}
 
-							<button onClick={handleSubmit}>Submit</button>
+							<button onClick={handleSubmit}>Send</button>
 						</form>
 					</div>
 				</div>
