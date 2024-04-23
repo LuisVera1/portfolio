@@ -7,7 +7,7 @@ export const sendMsg = async (form: any) => {
 
 	const body = `${p1}\n${p2}\n${p3} `;
 
-	const data = await fetch(import.meta.env.URL, {
+	const data = await fetch(import.meta.env.VITE_URL, {
 		method: 'POST',
 		headers: {
 			accept: 'application/json',
@@ -15,11 +15,14 @@ export const sendMsg = async (form: any) => {
 		},
 		body: JSON.stringify({
 			text: body,
-			chat_id: import.meta.env.ID,
+			chat_id: import.meta.env.VITE_ID,
 		}),
 	});
 
+	console.log('data', data);
+
 	const info = await data.json();
+	console.log('🚀 - info:', info);
 
 	return info;
 };

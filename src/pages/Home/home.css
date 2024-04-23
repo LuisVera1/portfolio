@@ -1,40 +1,56 @@
 .content {
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	font-family: Poppins, Helvetica, sans-serif;
-	text-align: center;
 	background-color: #f7f7f7;
+	display: flex;
+	font-family: Poppins, Helvetica, sans-serif;
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center;
+	width: 100%;
 }
 
 .presentation {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	gap: 20px;
 }
 
 .presentation__img {
-	width: 200px;
-	height: 200px;
 	background-color: #ddd;
 	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+
+@media (max-width: 580px) {
+	.presentation__img {
+		height: 150px;
+		width: 150px;
+	}
+}
+
+@media (max-width: 580px) {
+	.presentation__img {
+		height: 120px;
+		width: 120px;
+	}
 }
 
 .presentation__text-section {
+	min-width: 550px;
 	width: 60%;
 }
 
 .presentation__name {
-	font-size: 4rem;
 	color: #8194f5;
+	font-size: 4rem;
+	line-height: 4.5rem;
 }
 
 .presentation__subtitle {
-	font-size: 1.3rem;
 	color: #8194f588;
+	font-size: 1.3rem;
 }
 
 .presentation__subtitle span {
@@ -42,33 +58,33 @@
 }
 
 .presentation__description {
+	color: #333;
 	font-size: 1.1rem;
 	font-weight: 500;
-	color: #333;
 	margin-top: 12px;
 }
 
 .presentation__link {
-	text-decoration: none;
-	font-weight: 700;
-	padding: 20px 50px;
+	border: 2px solid #8194f5;
 	border-radius: 50px;
 	color: #333;
-	border: 2px solid #8194f5;
+	font-weight: 700;
+	padding: 20px 50px;
+	text-decoration: none;
 }
 
 .presentation__link:hover {
 	background-color: #8194f5;
-	color: white;
 	box-shadow: 0 5px 10px 0 #8194f5aa;
+	color: white;
 }
 
 .icons__section {
-	width: 40%;
-	display: flex;
 	align-items: center;
+	display: flex;
 	justify-content: space-around;
 	margin-top: 30px;
+	width: 40%;
 }
 
 #github-icon:hover {
@@ -78,12 +94,59 @@
 /* LinkedIn & Frontend Mentor */
 .icons__img {
 	filter: grayscale(100%);
+	height: 50px;
 	transition: filter 0.2s;
+	width: 50px;
 }
 
 .icons__img:hover {
 	filter: none;
 	transition: filter 0.4s;
+}
+
+@media (max-width: 580px) {
+	.presentation__text-section {
+		min-width: 310px;
+		width: 95%;
+	}
+
+	.presentation__name {
+		font-size: 3rem;
+		line-height: 3.5rem;
+	}
+
+	.presentation__description {
+		font-size: 1rem;
+	}
+
+	.icons__section {
+		margin-top: 0px;
+		width: 60%;
+	}
+
+	.presentation__link {
+		padding: 15px 40px;
+	}
+}
+
+@media (max-width: 445px) {
+	.presentation__name {
+		font-size: 2.5rem;
+		line-height: 2.7rem;
+	}
+
+	.presentation__description {
+		font-size: 0.9rem;
+	}
+
+	.icons__section {
+		width: 80%;
+	}
+
+	.icons__img {
+		height: 40px;
+		width: 40px;
+	}
 }
 
 /* contact */
@@ -92,25 +155,25 @@
 }
 
 .contact__title {
-	font-size: 2rem;
 	color: #8194f5;
+	font-size: 2rem;
 }
 
 .form-area {
 	background-color: white;
 	border: 1px solid lightgray;
 	border-radius: 20px;
-	padding: 50px;
 	box-shadow: 0 10px 10px #00000033;
+	padding: 50px;
 }
 
 .form {
-	margin-top: 20px;
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
 	gap: 15px;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
 /* inputs*/
@@ -119,30 +182,30 @@
 }
 
 .form__label {
+	color: #888;
 	display: block;
 	text-align: left;
-	color: #888;
 }
 
 .form__input {
-	width: 100%;
-	padding: 5px 5px;
+	border: 1px solid lightgray;
 	border-radius: 4px;
 	outline: none;
-	border: 1px solid lightgray;
+	padding: 5px 5px;
+	width: 100%;
 }
 
 .form__input:focus {
-	outline: none;
 	border: 1px solid #41e2ba;
+	outline: none;
 }
 
 .form__textarea {
-	padding: 5px 5px;
-	font-family: Arial, Helvetica, sans-serif;
-	resize: none;
-	outline: none;
 	border: 1px solid lightgray;
+	font-family: Arial, Helvetica, sans-serif;
+	outline: none;
+	padding: 5px 5px;
+	resize: none;
 }
 
 .form__textarea:focus {
@@ -154,16 +217,16 @@
 }
 
 .form__submit {
-	padding: 10px;
-	font-weight: 700;
-	padding: 20px 50px;
+	border: 2px solid #8194f5;
 	border-radius: 50px;
 	color: #333;
-	border: 2px solid #8194f5;
+	font-weight: 700;
+	padding: 10px;
+	padding: 20px 50px;
 }
 
 .form__submit:hover {
 	background-color: #8194f5;
-	color: white;
 	box-shadow: 0 5px 10px 0 #8194f5aa;
+	color: white;
 }
