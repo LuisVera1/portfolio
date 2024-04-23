@@ -6,6 +6,7 @@
 	align-items: center;
 	font-family: Poppins, Helvetica, sans-serif;
 	text-align: center;
+	background-color: #f7f7f7;
 }
 
 .presentation {
@@ -22,6 +23,10 @@
 	border-radius: 50%;
 }
 
+.presentation__text-section {
+	width: 60%;
+}
+
 .presentation__name {
 	font-size: 4rem;
 	color: #8194f5;
@@ -32,10 +37,15 @@
 	color: #8194f588;
 }
 
+.presentation__subtitle span {
+	color: #41e2ba;
+}
+
 .presentation__description {
 	font-size: 1.1rem;
 	font-weight: 500;
 	color: #333;
+	margin-top: 12px;
 }
 
 .presentation__link {
@@ -50,7 +60,7 @@
 .presentation__link:hover {
 	background-color: #8194f5;
 	color: white;
-	box-shadow: 0 0 10px 0 #8194f588;
+	box-shadow: 0 5px 10px 0 #8194f5aa;
 }
 
 .icons__section {
@@ -78,7 +88,6 @@
 
 /* contact */
 .contact-section {
-	background-color: lightgray;
 	min-height: 100vh;
 }
 
@@ -89,9 +98,10 @@
 
 .form-area {
 	background-color: white;
-	border: 1px solid gray;
+	border: 1px solid lightgray;
 	border-radius: 20px;
 	padding: 50px;
+	box-shadow: 0 10px 10px #00000033;
 }
 
 .form {
@@ -108,17 +118,52 @@
 	width: 100%;
 }
 
-.input-area label {
+.form__label {
 	display: block;
 	text-align: left;
 	color: #888;
 }
 
-.input-area input {
+.form__input {
 	width: 100%;
 	padding: 5px 5px;
+	border-radius: 4px;
+	outline: none;
+	border: 1px solid lightgray;
 }
 
-.input-area textarea {
+.form__input:focus {
+	outline: none;
+	border: 1px solid #41e2ba;
+}
+
+.form__textarea {
 	padding: 5px 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	resize: none;
+	outline: none;
+	border: 1px solid lightgray;
+}
+
+.form__textarea:focus {
+	border: 1px solid #41e2ba;
+}
+
+.form__msg-status--ok {
+	color: #41e2ba;
+}
+
+.form__submit {
+	padding: 10px;
+	font-weight: 700;
+	padding: 20px 50px;
+	border-radius: 50px;
+	color: #333;
+	border: 2px solid #8194f5;
+}
+
+.form__submit:hover {
+	background-color: #8194f5;
+	color: white;
+	box-shadow: 0 5px 10px 0 #8194f5aa;
 }

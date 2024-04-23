@@ -55,14 +55,17 @@ export const Home = () => {
 						<div className="presentation__img"></div>
 
 						<div className="presentation__text-section">
-							<h1 className="presentation__name">Hi, my Name is Luis Vera</h1>
+							<h1 className="presentation__name">Hi, I'm Luis Vera!</h1>
 							<h2 className="presentation__subtitle">
-								I'm Full Stack Developer
+								<span>{'< '}</span>Full Stack Developer<span>{' />'}</span>
 							</h2>
 							<p className="presentation__description">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Nostrum, tempora illo. Delectus odio laborum quaerat saepe
-								voluptur!
+								Passionate about technology, programming, and web development,
+								I've been immersed in a self-learning routine for 2+ years,
+								constantly seeking to acquire new skills.
+							</p>
+							<p className="presentation__description">
+								My focus is on user experience, performance, and accessibility.
 							</p>
 						</div>
 
@@ -101,19 +104,18 @@ export const Home = () => {
 			</main>
 
 			{/* contact */}
-			<section
-				id="contactme"
-				className="contact-section"
-				onSubmit={handleSubmit}
-			>
+			<section id="contactme" className="contact-section">
 				<div className="content">
 					<div className="form-area">
 						<h3 className="contact__title">Contact Me!</h3>
 
-						<form className="form">
+						<form className="form" onSubmit={handleSubmit}>
 							<div className="input-area">
-								<label htmlFor="">Name:</label>
+								<label className="form__label" htmlFor="user">
+									Name:
+								</label>
 								<input
+									className="form__input"
 									type="text"
 									value={user}
 									name="user"
@@ -122,8 +124,11 @@ export const Home = () => {
 							</div>
 
 							<div className="input-area">
-								<label htmlFor="">e-mail:</label>
+								<label className="form__label" htmlFor="email">
+									e-mail:
+								</label>
 								<input
+									className="form__input"
 									type="text"
 									value={email}
 									name="email"
@@ -132,8 +137,11 @@ export const Home = () => {
 							</div>
 
 							<div className="input-area">
-								<label htmlFor="">Message:</label>
+								<label className="form__label" htmlFor="msg">
+									Message:
+								</label>
 								<textarea
+									className="form__textarea"
 									name="msg"
 									id=""
 									cols={50}
@@ -142,9 +150,13 @@ export const Home = () => {
 									onChange={handleChangeForm}
 								></textarea>
 							</div>
-							{status == appStates.sended && <p>Sended Message</p>}
+							{status == appStates.sended && (
+								<p className="form__msg-status--ok">Sended Message</p>
+							)}
 
-							<button onClick={handleSubmit}>Send</button>
+							<button className="form__submit" onClick={handleSubmit}>
+								Send
+							</button>
 						</form>
 					</div>
 				</div>
