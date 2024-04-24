@@ -144,8 +144,8 @@ export const Home = () => {
 									className="form__textarea"
 									name="msg"
 									id=""
-									cols={50}
-									rows={10}
+									// cols={50}
+									rows={5}
 									value={msg}
 									onChange={handleChangeForm}
 								></textarea>

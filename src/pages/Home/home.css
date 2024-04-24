@@ -164,6 +164,8 @@
 	border: 1px solid lightgray;
 	border-radius: 20px;
 	box-shadow: 0 10px 10px #00000033;
+	width: 420px;
+	min-width: 320px;
 	padding: 50px;
 }
 
@@ -203,9 +205,11 @@
 .form__textarea {
 	border: 1px solid lightgray;
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
 	outline: none;
 	padding: 5px 5px;
 	resize: none;
+	width: 100%;
 }
 
 .form__textarea:focus {
@@ -229,4 +233,25 @@
 	background-color: #8194f5;
 	box-shadow: 0 5px 10px 0 #8194f5aa;
 	color: white;
+}
+
+@media (max-width: 445px) {
+	.form-area {
+		padding: 30px 40px;
+	}
+
+	.form__textarea {
+		font-size: 0.8rem;
+	}
+}
+
+/* landscape */
+@media (orientation: landscape) {
+	.presentation__img {
+		margin-top: 15px;
+	}
+
+	.form-area {
+		margin-bottom: 15px;
+	}
 }
