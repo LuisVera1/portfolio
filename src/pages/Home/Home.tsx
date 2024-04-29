@@ -68,7 +68,9 @@ export const Home = () => {
 			<main>
 				<div className="content">
 					<div className="presentation">
-						<div className="presentation__img"></div>
+						<div className="presentation__img">
+						<img loading="lazy" width="200" height="200" src="https://res.cloudinary.com/dsssuigym/image/upload/v1714417149/Projects/mrbsut2aqmysei0hmkez.webp" alt="Luis Vera" />
+						</div>
 
 						<div className="presentation__text-section">
 							<h1 className="presentation__name">Hi, I'm Luis Vera!</h1>
@@ -131,6 +133,7 @@ export const Home = () => {
 								</label>
 								<input
 									className="form__input"
+									aria-label='Name'
 									type="text"
 									value={user}
 									name="user"
@@ -144,6 +147,7 @@ export const Home = () => {
 								</label>
 								<input
 									className="form__input"
+									aria-label='Email'
 									type="text"
 									value={email}
 									name="email"
@@ -157,6 +161,7 @@ export const Home = () => {
 								</label>
 								<textarea
 									className="form__textarea"
+									aria-label='Message'
 									name="msg"
 									id=""
 									// cols={50}
@@ -172,6 +177,7 @@ export const Home = () => {
 							<button
 								className="form__submit"
 								onClick={handleSubmit}
+								aria-label='Send form'
 								disabled={form.status == appStates.sending}
 							>
 								Send

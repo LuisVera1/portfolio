@@ -18,10 +18,11 @@
 }
 
 .presentation__img {
-	background-color: #ddd;
+	background-color: #eeeeee;
 	border-radius: 50%;
 	height: 200px;
 	width: 200px;
+	overflow: hidden;
 }
 
 @media (max-width: 580px) {

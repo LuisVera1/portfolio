@@ -1,7 +1,7 @@
 export const sendMsg = async (form: any) => {
 	const { user, email, msg } = form;
 
-	const data = await fetch(import.meta.env.VITE_URL, {
+	const data = await fetch('https://portfolio-backend-henna-nu.vercel.app', {
 		method: 'POST',
 		headers: {
 			accept: 'application/json',
