@@ -22,7 +22,6 @@ export const Home = () => {
 
 	useEffect(() => {
 		if (status === appStates.sending) {
-			console.log('enviando mensaje');
 			const data = async () => {
 				const dat = await sendMsg(form);
 				if (dat.ok) setForm({ ...form, status: appStates.sended });

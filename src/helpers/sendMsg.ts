@@ -6,13 +6,13 @@ export const sendMsg = async (form: any) => {
 		headers: {
 			accept: 'application/json',
 			'content-type': 'application/json',
-			// 'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Origin': '*',
 		},
 		mode: 'cors',
 		body: JSON.stringify({
-			user,
+			name: user,
 			email,
-			msg,
+			message: msg,
 		}),
 	});
 
