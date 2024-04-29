@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { sendMsg } from '../../helpers/sendMsg';
 import './home.css';
+import { validateForm } from '../../helpers/validateForm';
 
 const initialForm = {
 	user: '',
@@ -21,9 +22,9 @@ export const Home = () => {
 
 	useEffect(() => {
 		if (status === appStates.sending) {
+			console.log('enviando mensaje');
 			const data = async () => {
 				const dat = await sendMsg(form);
-
 				if (dat.ok) setForm({ ...form, status: appStates.sended });
 			};
 
@@ -43,7 +44,23 @@ export const Home = () => {
 	const handleSubmit = (event: any) => {
 		event.preventDefault();
 
-		setForm({ ...form, status: appStates.sending });
+		if (form.status === appStates.stand) {
+			const dataToSend = {
+				...form,
+				user: validateForm({ name: 'name', value: user }),
+				email: validateForm({ name: 'email', value: email }),
+				msg: validateForm({ name: 'msg', value: msg }),
+				status: appStates.sending,
+			};
+
+			if (
+				dataToSend.user.length > 2 &&
+				dataToSend.email.length > 5 &&
+				dataToSend.msg.length > 5
+			) {
+				setForm(dataToSend);
+			}
+		}
 	};
 
 	return (
@@ -63,8 +80,7 @@ export const Home = () => {
 								Passionate about technology, programming, and web development,
 								I've been immersed in a self-learning routine for 2+ years,
 								constantly seeking to acquire new skills.
-							</p>
-							<p className="presentation__description">
+								<br />
 								My focus is on user experience, performance, and accessibility.
 							</p>
 						</div>
@@ -154,7 +170,11 @@ export const Home = () => {
 								<p className="form__msg-status--ok">Sended Message</p>
 							)}
 
-							<button className="form__submit" onClick={handleSubmit}>
+							<button
+								className="form__submit"
+								onClick={handleSubmit}
+								disabled={form.status == appStates.sending}
+							>
 								Send
 							</button>
 						</form>

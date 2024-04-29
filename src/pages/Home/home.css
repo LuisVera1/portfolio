@@ -13,7 +13,8 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	justify-content: space-between;
+	height: 90vh;
 }
 
 .presentation__img {
@@ -61,7 +62,7 @@
 	color: #333;
 	font-size: 1.1rem;
 	font-weight: 500;
-	margin-top: 12px;
+	margin-top: 16px;
 }
 
 .presentation__link {
@@ -83,7 +84,6 @@
 	align-items: center;
 	display: flex;
 	justify-content: space-around;
-	margin-top: 30px;
 	width: 40%;
 }
 
@@ -120,7 +120,6 @@
 	}
 
 	.icons__section {
-		margin-top: 0px;
 		width: 60%;
 	}
 
@@ -175,7 +174,6 @@
 	flex-direction: column;
 	gap: 15px;
 	justify-content: space-between;
-	margin-top: 20px;
 }
 
 /* inputs*/
