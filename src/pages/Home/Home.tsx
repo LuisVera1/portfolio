@@ -68,8 +68,8 @@ export const Home = () => {
 			<main>
 				<div className="content">
 					<div className="presentation">
-						<div className="presentation__img">
-						<img loading="lazy" width="200" height="200" src="https://res.cloudinary.com/dsssuigym/image/upload/v1714417149/Projects/mrbsut2aqmysei0hmkez.webp" alt="Luis Vera" />
+						<div className="presentation__img-section">
+						<img className='presentation__img' loading="lazy" width="200" height="200" src="https://res.cloudinary.com/dsssuigym/image/upload/v1714417149/Projects/mrbsut2aqmysei0hmkez.webp" alt="Luis Vera" />
 						</div>
 
 						<div className="presentation__text-section">
