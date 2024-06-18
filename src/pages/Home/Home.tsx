@@ -87,7 +87,7 @@ export const Home = () => {
 						</div>
 
 						<a className="presentation__link" href="/#contactme">
-							Conctat me!
+							Conctact me!
 						</a>
 
 						<div className="icons__section">
